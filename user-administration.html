@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Backflow Testing - Administration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" /> 
+    <link rel="stylesheet" type="text/css" href="common_files/styles/backflow.css" />
+</head>
+
+
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="index.html">
+                        <img src="common_files/images/logo.png" alt="" /> 
+                        <span class="title">  
+                            Backflow Prevention<br />
+                            Assembly Testing and Inventory
+                        </span>
+                    </a>
+                    <span id="date"></span>
+                </div>
+            </div>
+    </header>
+
+
+
+    
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">            
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navv"
+           aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="navv">
+           <ul class="navbar-nav mr-auto">
+
+
+               <li class="nav-item">
+                   <a class="nav-link" href="index.html"><i class="fa fa-home"
+                           aria-hidden="true"></i> Home</a>
+               </li>
+
+               <li class="nav-item">
+                   <a class="nav-link" href="search.html"><i class="fa fa-search"
+                           aria-hidden="true"></i> Search</a>
+               </li>
+
+               <li class="nav-item">
+                   <a class="nav-link" href="recertify.html"><i class="fa fa-check-square-o"
+                           aria-hidden="true"></i> Inspection Forms</a>
+               </li>
+
+               <li class="nav-item">
+                   <a class="nav-link active" href="administration.html"><i class="fa fa-cog"
+                           aria-hidden="true"></i> Administration</a>
+               </li>
+
+               <li class="nav-item">
+                   <a class="nav-link" href="help.html"><i class="fa fa-exclamation-circle"
+                           aria-hidden="true"></i> Help</a>
+               </li>
+
+
+
+
+           </ul>
+   
+               <span class='greeting no_print'><i class="fa fa-user" aria-hidden="true"></i>
+                   Welcome, seth.scott@mymanatee.org</span>
+        
+       </div>  
+
+</nav>
+
+
+
+<main>
+  <div class="container">
+
+      <div class="row">
+        <div class="col mt-3">
+          <ul class="list-group">
+              <a class="list-group-item list-group-item-action" href='administration.html'>Edit User</a>
+              <a class="list-group-item list-group-item-action" href='reports.html'>Reports</a>
+              <a class="list-group-item list-group-item-action" href='edit-email.html'>Edit Default Email</a>
+              <a class="list-group-item list-group-item-action" href='list-users.html'>List Users</a>
+              <a class="list-group-item list-group-item-action" href='upload.html'>Upload Upcoming Backflow Tests</a>
+              <a class="list-group-item list-group-item-action" href='notifications.html'>Notifications and Documents</a>
+              <a class="list-group-item list-group-item-action active" href='user-administration.html'>User Administration</a>
+              <a class="list-group-item list-group-item-action" href='index.html'>Log Out</a>
+          </ul>
+        </div>
+
+
+
+
+
+        <div class="col-md-9 mt-3">
+
+       
+                <ol class="breadcrumb">
+                        <li class="breadcrumb-item">Home</li>
+                        <li class="breadcrumb-item">Administration</li>
+                        <li class="breadcrumb-item active">User Administration</li>
+                      </ol>
+      
+
+
+
+          <h1>User Administration</h1>
+
+          <form action="testing">
+          <fieldset>
+               <legend>Select a name to edit</legend>
+               
+               <label>Select a user to update</label>
+               <select onchange="javascript:this.form.submit();" name="active_tester"> 
+                    <option value="" selected="selected">&nbsp;</option>
+                    <option style="color:red" value="new">Create a new user</option>                
+                    <option  value='9412326397.piper@gmail.com'>9412326397.piper@gmail.com</option>
+          <option  value='9413761344.pipe@gmail.com'>9413761344.pipe@gmail.com</option>
+          <option  value='9413761344.piper@gmail.com'>9413761344.piper@gmail.com</option>
+          <option  value='9414629741.piper@gmail.com'>9414629741.piper@gmail.com</option>
+          <option  value='9414629741@gmail.com'>9414629741@gmail.com</option>
+          <option  value='aaabackflowrus@hotmail.com'>aaabackflowrus@hotmail.com</option>
+          <option  value='aaabackflowsrus@hotmail.com'>aaabackflowsrus@hotmail.com</option>
+          <option  value='aaron@aaronsbackflow.com'>aaron@aaronsbackflow.com</option>
+          <option  value='aas-accuratebackflow@gmail.com'>aas-accuratebackflow@gmail.com</option>
+          <option  value='abenton@waynefire.com'>abenton@waynefire.com</option>
+          <option  value='abouttimeplumbing@hotmail.com'>abouttimeplumbing@hotmail.com</option>
+          <option  selected='selected' value='abp1225@yahoo.com'>abp1225@yahoo.com</option>
+          <option  value='accessfire1@msn.com'>accessfire1@msn.com</option>
+          <option  value='accessfire_service@msn.com'>accessfire_service@msn.com</option>
+          <option  value='accounting@babesplumbing.com'>accounting@babesplumbing.com</option>
+          <option  value='accuratebackflow@gmail.com'>accuratebackflow@gmail.com</option>
+          <option  value='ace.plumbing@yahoo.com'>ace.plumbing@yahoo.com</option>
+          <option  value='acec.aceplumbing@yahoo.com'>acec.aceplumbing@yahoo.com</option>
+          <option  value='acec.plumbing@yahoo.com'>acec.plumbing@yahoo.com</option>
+          <option  value='actioncraft5593@aol.com'>actioncraft5593@aol.com</option>
+          <option  value='adellar82@gmail.com'>adellar82@gmail.com</option>
+          <option  value='adellar82@gmail>com'>adellar82@gmail>com</option>
+          <option  value='admin.orlando@vscfire.com'>admin.orlando@vscfire.com</option>
+          <option  value='admin@goldcoastfire.com'>admin@goldcoastfire.com</option>
+          <option  value='admin@parrishfd.org'>admin@parrishfd.org</option>
+          <option  value='adrienne.oberg@mymanatee.org'>adrienne.oberg@mymanatee.org</option>
+          <option  value='alayna.chavez@cooltoday.com'>alayna.chavez@cooltoday.com</option>
+          <option  value='albert@masterplumbersandseptic.com'>albert@masterplumbersandseptic.com</option>
+          <option  value='albert@masterplumbingand septic.com'>albert@masterplumbingand septic.com</option>
+          <option  value='albert@masterplumbingandseptic.com'>albert@masterplumbingandseptic.com</option>
+          <option  value='alex@abfservices.com'>alex@abfservices.com</option>
+          <option  value='alfonso@aaronsbackflow.com'>alfonso@aaronsbackflow.com</option>
+          <option  value='alfredo200983@hotmail.com'>alfredo200983@hotmail.com</option>
+          <option  value='alligatorplumbing@gmail.com'>alligatorplumbing@gmail.com</option>
+          <option  value='alpeeler@waynefire.com'>alpeeler@waynefire.com</option>
+          <option  value='alyshasffp@gmail.com'>alyshasffp@gmail.com</option>
+          <option  value='amartalona@waynefire.com'>amartalona@waynefire.com</option>
+          <option  value='amy1@mcdonoughplumbinginc.com'>amy1@mcdonoughplumbinginc.com</option>
+          <option  value='amy2@mcdonough'>amy2@mcdonough</option>
+          <option  value='amy2@mcdonoughplumbinginc.com'>amy2@mcdonoughplumbinginc.com</option>
+          <option  value='andrew.kirkwood@customairinc.com'>andrew.kirkwood@customairinc.com</option>
+          <option  value='andy.franklin@piperfire.com'>andy.franklin@piperfire.com</option>
+          <option  value='andy_drew8620@yahoo.com'>andy_drew8620@yahoo.com</option>
+          <option  value='annahifa13@gmail.com'>annahifa13@gmail.com</option>
+          <option  value='anthony.mariash@cooltoday.com'>anthony.mariash@cooltoday.com</option>
+          <option  value='anthony.sinopoli@mymanatee.org'>anthony.sinopoli@mymanatee.org</option>
+          <option  value='anthonygennaroplumbing@gmail.com'>anthonygennaroplumbing@gmail.com</option>
+          <option  value='aonishenko@emfr.org'>aonishenko@emfr.org</option>
+          <option  value='apk-accuratebackflow@gmail.com'>apk-accuratebackflow@gmail.com</option>
+          <option  value='armstrongbros273@live.com'>armstrongbros273@live.com</option>
+          <option  value='armstrongbrosplumbing@gmail.com'>armstrongbrosplumbing@gmail.com</option>
+          <option  value='arrowplmbg@aol.com'>arrowplmbg@aol.com</option>
+          <option  value='asandell@centuryfp.com'>asandell@centuryfp.com</option>
+          <option  value='asapplbg@aol.com'>asapplbg@aol.com</option>
+          <option  value='asherd@piperfire.com'>asherd@piperfire.com</option>
+          <option  value='ashley@bayonet-inc.com'>ashley@bayonet-inc.com</option>
+          <option  value='atmiller1121@gmail.com'>atmiller1121@gmail.com</option>
+          <option  value='atruplumbing@gmail.com'>atruplumbing@gmail.com</option>
+          <option  value='b.shepherd@atotalsolution.com'>b.shepherd@atotalsolution.com</option>
+          <option  value='backflow2@lapenseeplumbing.com'>backflow2@lapenseeplumbing.com</option>
+          <option  value='backflow@fqplumbing.com'>backflow@fqplumbing.com</option>
+          <option  value='backflow@lapenseeplumbing.com'>backflow@lapenseeplumbing.com</option>
+          <option  value='backflow@maintenx.com'>backflow@maintenx.com</option>
+          <option  value='backflows1@alvarezplumbing.com'>backflows1@alvarezplumbing.com</option>
+          <option  value='backflows2@alvarezplumbing.com'>backflows2@alvarezplumbing.com</option>
+          <option  value='backflows@alvarezplumbing.com'>backflows@alvarezplumbing.com</option>
+          <option  value='backflows@quickresponsefl.com'>backflows@quickresponsefl.com</option>
+          <option  value='backflowsofcentralfl@cfl.rr.com'>backflowsofcentralfl@cfl.rr.com</option>
+          <option  value='bandi.jones27@gmail.com'>bandi.jones27@gmail.com</option>
+          <option  value='bapi@mailmt.com'>bapi@mailmt.com</option>
+          <option  value='barrieretbp2@aol.com'>barrieretbp2@aol.com</option>
+          <option  value='bas@wiginton.net'>bas@wiginton.net</option>
+          <option  value='bconrad@aquaplumbing.com'>bconrad@aquaplumbing.com</option>
+          <option  value='bdearmas@quickresponsefl.com'>bdearmas@quickresponsefl.com</option>
+          <option  value='bdyal@quickresponsefl.com'>bdyal@quickresponsefl.com</option>
+          <option  value='beaplumber@aol.com'>beaplumber@aol.com</option>
+          <option  value='beastjc6@gmail.com'>beastjc6@gmail.com</option>
+          <option  value='beezy6419@gmail.com'>beezy6419@gmail.com</option>
+          <option  value='ben.broco@dynafire.com'>ben.broco@dynafire.com</option>
+          <option  value='ben@parrishplumbing.com'>ben@parrishplumbing.com</option>
+          <option  value='bhall@waynefire.com'>bhall@waynefire.com</option>
+          <option  value='bhuelsman@alliancefiresafety.com'>bhuelsman@alliancefiresafety.com</option>
+          <option  value='bige1009@yahoo.com'>bige1009@yahoo.com</option>
+          <option  value='bill@thompkinscontracting.com'>bill@thompkinscontracting.com</option>
+          <option  value='billc@naplesfireprotection.com'>billc@naplesfireprotection.com</option>
+          <option  value='billy@lapenseeplumbing.com'>billy@lapenseeplumbing.com</option>
+          <option  value='blantonplumbing@verizon.net'>blantonplumbing@verizon.net</option>
+          <option  value='bledoux333@simplexgrinnell.com'>bledoux333@simplexgrinnell.com</option>
+          <option  value='blueribbonplbg@gmail.com'>blueribbonplbg@gmail.com</option>
+          <option  value='blueribbonplbg@yahoo.com'>blueribbonplbg@yahoo.com</option>
+          <option  value='bobby@babesplumbing.com'>bobby@babesplumbing.com</option>
+          <option  value='bohara.ryan@gmail.com'>bohara.ryan@gmail.com</option>
+          <option  value='bonniem1234@aol.com'>bonniem1234@aol.com</option>
+          <option  value='bootzplumbing@aol.com'>bootzplumbing@aol.com</option>
+          <option  value='bpayne@arrowplumbingsrvcs.com'>bpayne@arrowplumbingsrvcs.com</option>
+          <option  value='brandon.plumbingbygeorge@gmail.com'>brandon.plumbingbygeorge@gmail.com</option>
+          <option  value='brandon@allproplumbing.org'>brandon@allproplumbing.org</option>
+          <option  value='brandon@frankgayservices.com'>brandon@frankgayservices.com</option>
+          <option  value='bravadoplumbing@gmail.com'>bravadoplumbing@gmail.com</option>
+          <option  value='brian.henke@mymanatee.org'>brian.henke@mymanatee.org</option>
+          <option  value='brian@abfservices.com'>brian@abfservices.com</option>
+          <option  value='brian@hugheyservices.com'>brian@hugheyservices.com</option>
+          <option  value='brianf@cfcsystems.com'>brianf@cfcsystems.com</option>
+          <option  value='bruce.luther1068@gmail.com'>bruce.luther1068@gmail.com</option>
+          <option  value='bryan@abcsouthwest.com'>bryan@abcsouthwest.com</option>
+          <option  value='bryanswanson@rjkieltyplumbing.com'>bryanswanson@rjkieltyplumbing.com</option>
+          <option  value='bshepherd@atotalsolution.com'>bshepherd@atotalsolution.com</option>
+          <option  value='bsimmons@vscfs.com'>bsimmons@vscfs.com</option>
+          <option  value='btomlin@alliancefiresafety.com'>btomlin@alliancefiresafety.com</option>
+          <option  value='bulldnns@aol.com'>bulldnns@aol.com</option>
+          <option  value='burnhamd@floridafireservice.com'>burnhamd@floridafireservice.com</option>
+          <option  value='bwp@wiginton.net'>bwp@wiginton.net</option>
+          <option  value='cakirby@waynefire.com'>cakirby@waynefire.com</option>
+          <option  value='cameron.benton@mymanatee.org'>cameron.benton@mymanatee.org</option>
+          <option  value='camiloroldan@hotmail.com'>camiloroldan@hotmail.com</option>
+          <option  value='carole.cooper@mymanatee.org'>carole.cooper@mymanatee.org</option>
+          <option  value='casey@arcticair4me.com'>casey@arcticair4me.com</option>
+          <option  value='caseysplumbing1@yahoo.com'>caseysplumbing1@yahoo.com</option>
+         
+                  
+               </select>
+
+                                         
+               <input type="hidden" value="admin" name="view"/>
+               <input type="hidden" value="update_user" name="action"/>
+          </fieldset>
+          </form>
+          
+           
+           
+          
+          <h2>Edit User Information</h2>
+          
+          
+          <form action="">
+          <fieldset>
+
+                <div class="row">
+                    <div class="col">
+
+                            <legend>User Information</legend>
+               
+                            <label>Name:</label>
+                            <input type="text" />
+                            
+                            <label>Email:</label>
+                            <input type="text" />
+                            
+                            <label>Role:</label>
+                            <select>
+                                 <option></option>
+                                 <option  value="ADMIN">Administrator</option> 
+                                 <option selected=selected value="CERTIFIED_TESTER">Tester</option>
+                                 <option  value="FIRE_MARSHAL">Fire Marshal</option>
+                            </select>
+                            
+                            <label>Active:</label>
+                            <select>
+                                 <option></option>
+                                 <option selected=selected value="Yes">Yes</option> 
+                                 <option  value="No">No</option>
+                            </select>
+                            
+                         
+                            
+                            <label>Certification number:</label>
+                            <input type="text" />
+                       
+                            <label>Certification Expiration date:</label>
+                            <input type="text" />
+
+
+                    </div>
+                    <div class="col">
+
+                        
+                    <legend>Company Information</legend>
+                    
+                    <label>Company name:</label>
+                    <input type="text" />
+                    
+                    <label>License number:</label>
+                    <input type="text" />
+                    
+                    <label>Address:</label>
+                    <input type="text" />       
+                    
+                    <label>Phone Number:</label>
+                    <input type="text" />
+                    
+                    <label>License Expiration date:</label>
+                    <input type="text" />
+                    
+                    <label>Insurance carrier:</label>
+                    <input type="text" />            
+                    
+                    <label>Insurance Expiration date:</label>
+                    <input type="text" />
+
+
+                    </div>
+                </div>
+
+
+  
+                        
+               
+<div class="row">
+    <div class="col">
+            <legend>Test Kit Information</legend>
+    </div>
+</div>
+
+                   
+                    <div class="row">
+                            <div class="col">
+                                    
+
+
+                    <label>Manufacturer:</label>
+                    <input type="text" />
+                        
+
+               <label>Password:</label>
+               <input type="text" />
+
+               </div>
+               <div class="col">
+               <label>Test Kit Model:</label>
+               <input type="text" />
+               
+               <label>Test Kit Calibration Date:</label>
+               <input type="text" />   
+
+               <label>Test Kit Serial Number:</label>
+               <input type="text" />
+
+
+</div>
+</div>
+
+
+               <span>To update the user without changing their password use 'USE EXISTING PASSWORD' in the password input box.</span>
+                 
+               <button type="submit" value="Submit" class="btn btn-primary btn-lg">Update User</button>
+               <button type="reset" value="Reset" class="btn btn-secondary btn-lg">Reset</button>
+               <button type="submit" value="Delete" class="btn btn-danger btn-lg">Delete User</button>
+          </fieldset>
+          
+
+
+
+          </form>
+         
+          
+      
+          
+
+
+
+
+
+        </div>
+        </div> 
+      </div>
+      </div><!--end row-->
+    </div>
+    </main>
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5 mb-5">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://acrobat.adobe.com/us/en/acrobat.html">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Adobe PDF Reader
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:water.saver@mymanatee.org">Email</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.mymanatee.org">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.mymanatee.org/departments/utilities/">Manatee County Utilities</a>
+                    </li>
+                
+            </ul>    
+
+                <img class="seal" src="common_files/images/seal.png" alt="" /> 
+                <div class="copyright">&copy;2020 Manatee County Board of County Commissioners. All Rights Reserved.<br />
+                Designed and Developed by Manatee County Information Technology Services</div>
+
+            </div>
+        </div> 
+    </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+    
+         if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+    
+    if(nyear<1000) nyear+=1900;
+    if(nmin<=9) nmin="0"+nmin;
+    if(nsec<=9) nsec="0"+nsec;
+    
+    document.getElementById('date').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    }
+    
+    window.onload=function(){
+    GetClock();
+    setInterval(GetClock,1000);
+    }
+
+</script>
+  </body>
+</html>

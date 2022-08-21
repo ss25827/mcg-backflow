@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Backflow Testing - Inspections - Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" /> 
+    <link rel="stylesheet" type="text/css" href="common_files/styles/backflow.css" />
+</head>
+
+
+
+<body>
+    
+
+  
+  <header>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="common_files/images/logo.png" alt="" /> 
+                <span class="title">  
+                    Backflow Prevention<br />
+                    Assembly Testing and Inventory
+                </span>
+                <span id="date"></span>
+            </div>
+        </div>
+</header>
+
+
+
+<nav class="navbar navbar-expand-md navbar-dark">
+     <div class="container">            
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navv"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navv">
+        <ul class="navbar-nav mr-auto">
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="home.html"><i class="fa fa-home"
+                        aria-hidden="true"></i> Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="search.html"><i class="fa fa-search"
+                        aria-hidden="true"></i> Search</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="recertify.html"><i class="fa fa-check-square-o"
+                        aria-hidden="true"></i> Inspection Forms</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="administration.html"><i class="fa fa-cog"
+                        aria-hidden="true"></i> Administration</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="help.html"><i class="fa fa-exclamation-circle"
+                        aria-hidden="true"></i> Help</a>
+            </li>
+
+
+
+
+        </ul>
+
+                <span class='greeting no_print'><i class="fa fa-user" aria-hidden="true"></i>
+                    Welcome, seth.scott@mymanatee.org</span>
+      
+    </div>  
+
+</nav>
+
+
+<main>
+  <div class="container">
+
+      <div class="row">
+        <div class="col mt-3">
+            <ul class="list-group">
+                <a class="list-group-item list-group-item-action" href='recertify.html'>Recertify</a>
+                <a class="list-group-item list-group-item-action" href='replace.html'>Replace</a>
+                <a class="list-group-item list-group-item-action" href='new-assembly.html'>New Assembly</a>
+                <a class="list-group-item list-group-item-action active" href='report.html'>Report Incorrect BFA Data</a>
+                <a class="list-group-item list-group-item-action" href='inspection-report.html'>Inspection Report</a>
+                <a class="list-group-item list-group-item-action" href='index.html'>Logout</a>
+  
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="col-md-9 mt-3">
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Inspection Forms</li>
+                <li class="breadcrumb-item active" aria-current="page">Report a Mistake</li>
+              </ol>
+          
+
+          
+
+
+<h1>Report a Mistake</h1>
+
+
+<form action="inspection-report.html">
+<fieldset>
+
+    <legend>Report Incorrect BFA Data</legend>
+    
+
+
+     <div class="row">
+<div class="col">
+
+
+    
+        <label for="exception_notes">Please describe the problem:</label>
+
+        <textarea rows="3"></textarea>
+
+
+     <label for="inspection_action">Inspection Status:</label>
+     <select id="inspection_action" name="inspection_action">
+          <option value="">&nbsp;</option>
+          <option value="recertify">Recertify</option>  
+          <option value="replace">Replace</option>  
+          <option value="new">New</option>  
+     </select>
+     
+     <label for="permit">Permit Number:</label>
+     <input   title="Is it new construction with a permit number?" id="permit" name="permit" type="text" />
+     
+     <label for="premise">Premise Number:</label>
+     <input  value="" title="Do you know the Manatee County premise ID where the backflow assembly was located?" id="premise" name="premise" type="text" />
+     
+     <label for="address" >Address:</label>
+     <input  value="" id="address" title="What was the addres the backflow assembly was located at?" name="address" type="text" />
+     
+     <label for="customer_name">Customer Name:</label>
+     <input  value="" title="Do you know the customer's name." id="customer_name" name="customer_name" type="text" />
+     
+     <label for="meter_number">Meter Number:</label>
+     <input  value="" title="What was the meter number that this backflow assembly was attached to?" id="meter_number" name="meter_number" type="text" />
+
+    </div>
+     <div class="col">
+
+     <label title="What type of backflow assembly is it??"  >Valve Type:</label>
+     <select   id="valve_type" name="valve_type" onchange="javascript:hide_valves(this.value);">
+          <option selected="selected">&nbsp;</option>
+<option value="RPV">Reduced Pressure Valve</option>
+<option value="PVB">Pressure Vacuum Breaker</option>
+<option value="DCV">Double Check Detector</option>
+<option value="RPD">Reduced Pressure Detector</option>
+<option value="DC">Double Check Valve</option>
+
+     </select>
+
+     <label for="size">Size:</label><select  title="What was the size of the backflow assembly's water line?" id="size" name="size">
+          <option selected="selected">&nbsp;</option>
+<option value="0.75">0.75 Inch</option><option value="1">1 Inch</option><option value="1.5">1.5 Inch</option><option value="2">2 Inch</option><option value="3">3 Inch</option><option value="4">4 Inch</option><option value="6">6 Inch</option><option value="8">8 Inch</option><option value="10">10 Inch</option><option value="12">12 Inch</option><option value="14">14 Inch</option><option value="16">16 Inch</option>
+     </select><br/>
+     
+     <label  for="make">Manufacturer:</label>
+     <select title="What is the manufacturer that produced this particular backflow assembly." id="make" name="make" >
+          <option selected="selected" value="">&nbsp;</option>
+          
+               
+                    <option value="A.R.I.">A.R.I.</option>
+               
+          
+               
+                    <option value="AMES">AMES</option>
+               
+          
+               
+                    <option value="APOLLO">APOLLO</option>
+               
+          
+               
+                    <option value="BADGER">BADGER</option>
+               
+          
+               
+                    <option value="BEECO">BEECO</option>
+               
+          
+               
+                    <option value="BUCKNER">BUCKNER</option>
+               
+          
+               
+                    <option value="CLAVAL">CLAVAL</option>
+               
+          
+               
+                    <option value="CONBRACO">CONBRACO</option>
+               
+          
+               
+                    <option value="FEBCO">FEBCO</option>
+               
+          
+               
+                    <option value="FLOW O MATIC">FLOW O MATIC</option>
+               
+          
+               
+                    <option value="HERSEY">HERSEY</option>
+               
+          
+               
+                    <option value="HERSEY/GRINNEL">HERSEY/GRINNEL</option>
+               
+          
+               
+                    <option value="NEPTUNE">NEPTUNE</option>
+               
+          
+               
+                    <option value="RAINBIRD">RAINBIRD</option>
+               
+          
+               
+                    <option value="TORO">TORO</option>
+               
+          
+               
+                    <option value="UNKNOWN">UNKNOWN</option>
+               
+          
+               
+                    <option value="VIKING">VIKING</option>
+               
+          
+               
+                    <option value="WATTS">WATTS</option>
+               
+          
+               
+                    <option value="WILKINS">WILKINS</option>
+               
+          
+               
+          
+     </select>
+     
+     <label  for="model">Model:</label>
+     <input  value=""  title="What was the model of this backflow assembly?" id="model" name="model" type="text" /><br/>
+
+     <label class="required" for="backflow_serial">Backflow Preventer's Serial Number:</label>
+     <input maxlength="8"  title="What is the new backflow assembly's serial number?" id="backflow_serial" name="backflow_serial" type="text" value="" /><br/>
+     
+     <label for="location">Location:</label>
+     <textarea title="Describe where the backflow preventer/meter is located." id="location" name="location"  cols="25" rows="2"></textarea><br/>
+     
+     <label for="line_type">Line Type:</label>
+     <select title="What type of water line is feeding the backflow assembly?"  id="line_type" name="line_type">
+          <option selected="selected" value="">&nbsp;</option>
+          <option  value="potable">Potable</option>
+          <option value="irrigation">Irrigation</option>
+          <option value="fireline">Fireline</option>
+     </select>
+
+    </div>
+</div><!--end row-->
+     
+
+     <fieldset>
+          <legend>Test Results</legend>
+
+          <label class="required" for="test_date">Test Date OR Date the problem was discovered:</label>
+          <input title="Enter the date you performed the test" id="test_date" name="test_date" type="text" />
+        
+          <div id="calendar_value"></div>
+          
+          <span id="valve_1">
+               <label for="check1psi">Valve 1: (PSI)</label>
+               <input class="short" id="check1psi" name="check1psi" type="text" onblur="checkValve(1)" />
+          </span>
+          
+          <span id="valve_2">
+               <label for="check2psi">Valve 2: (PSI)</label>
+               <input  class="short" id="check2psi" name="check2psi" type="text" onblur="checkValve(2)" />
+ 
+          </span>
+          
+          <span id="valve_3">
+               <label for="relief_psi">Relief Valve Opened At: (PSI)</label>
+               <input class="short" title="Relief valve opend at what psi" id="relief_psi" name="relief_psi" type="text" />
+          </span>
+
+          <label>This assembly was repaired:</label>
+          <input type="checkbox" name="repaired" id="repaired" value="repaired" />
+          
+          <label for="notes">Repairs, parts, materials and comments:</label>
+          <textarea id="notes" name="notes" rows="3" cols="26"></textarea>
+     </fieldset>
+
+     <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+     <button type="reset" value="Reset" class="btn btn-secondary">Reset</button>
+
+
+     
+     <small class="form-text text-muted">
+            If you have made a mistake entering data or if you have found an error in the data, please report it here with this form.
+    </small>
+
+
+</fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+
+        </div>
+        </div> 
+      </div>
+      </div><!--end row-->
+    </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col mt-5 mb-5">
+                  <ul>
+                      <li>
+                          <a target="_blank" href="https://acrobat.adobe.com/us/en/acrobat.html">
+                              <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Adobe PDF Reader
+                          </a>
+                      </li>
+                      <li>
+                          <a href="mailto:water.saver@mymanatee.org">Email</a>
+                      </li>
+                      <li>
+                          <a target="_blank" href="https://www.mymanatee.org">Disclaimer</a>
+                      </li>
+                      <li>
+                          <a target="_blank" href="https://www.mymanatee.org/departments/utilities/">Manatee County Utilities</a>
+                      </li>
+                  
+              </ul>    
+  
+                  <img class="seal" src="common_files/images/seal.png" alt="" /> 
+                  <div class="copyright">&copy;2020 Manatee County Board of County Commissioners. All Rights Reserved.<br />
+                  Designed and Developed by Manatee County Information Technology Services</div>
+  
+              </div>
+          </div> 
+      </div>
+  </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+      tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+      
+      function GetClock(){
+      var d=new Date();
+      var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+      
+           if(nhour==0){ap=" AM";nhour=12;}
+      else if(nhour<12){ap=" AM";}
+      else if(nhour==12){ap=" PM";}
+      else if(nhour>12){ap=" PM";nhour-=12;}
+      
+      if(nyear<1000) nyear+=1900;
+      if(nmin<=9) nmin="0"+nmin;
+      if(nsec<=9) nsec="0"+nsec;
+      
+      document.getElementById('date').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+      }
+      
+      window.onload=function(){
+      GetClock();
+      setInterval(GetClock,1000);
+      }
+  
+  </script>
+    </body>
+  </html>

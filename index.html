@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Backflow Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" /> 
+    <link rel="stylesheet" type="text/css" href="common_files/styles/backflow.css" />
+</head>
+
+
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="common_files/images/logo.png" alt="" /> 
+                    <span class="title">  
+                        Backflow Prevention<br />
+                        Assembly Testing and Inventory
+                    </span>
+                    <span id="date"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+<main>
+  <div class="container">
+
+      <div class="row">
+        <div class="col mt-3">
+ 
+            <h1>Manatee County Backflow Prevention
+              <br />Assembly Testing and Inventory System</h1>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+
+
+
+        <div class="col-md-4 mb-5">
+
+            <form action="home.html">
+                 <fieldset>
+                        <legend>Login</legend>
+                      
+                      <label for="username" >User Name:</label>
+                      <input type="text" />
+                      
+                      <label for="password">Password:</label>
+                      <input type="text" />
+  
+                      <button type="submit" value="Login" class="btn btn-primary btn-lg">Sign in</button>
+  
+                      <small class="form-text text-muted">
+                          Your session will expire after 30 minutes of inactivity.  You will then need to log in again.
+                      </small>
+            
+                 </fieldset>
+            </form>
+          </div>
+  
+
+
+
+
+
+        <div class="col mb-5">
+
+<h2>Welcome</h2>
+
+<p>This web site is designed for the Backflow Prevention Assembly certification data.  
+     Test results from annual inspections are recorded to this site.</p>
+
+<p class="mb-3"><strong>This application is for authorized users only.</strong> 
+     Contractors must be registered with the Cross Connection Control Office and possess a valid, up-to-date plumbing license, 
+     current insurance, backflow test/repair certification and calibration of equipment before access will be granted. 
+    </p>
+
+  
+     <h2>Register</h2>
+
+     <p>If you would like to participate in the program, please download and print the attached 
+        <a href="/bfd/BFD_AUTHORIZED_AGENT_FORM2017.pdf" >Signature Authorization Form</a>. 
+        The completed, signed and <em>notarized</em> form can be dropped off or mailed to:
+       </p>
+
+   <address>
+    <strong>Manatee County Utility Operations</strong><br>
+   Cross Connection Control Office<br>
+   4412 66th Street West<br>
+   Bradenton, FL 34210
+   </address>
+   
+   <p>If you have any questions or need further information about the program, either call (941) 792-8811, Extension 
+        5267, or e-mail to <a href="mailto:water.saver@mymanatee.org">water.saver@mymanatee.org</a>.</p>
+        
+   
+      </div>
+
+
+
+      </div><!--end row-->
+    </div>
+</main>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-5 mb-5">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://acrobat.adobe.com/us/en/acrobat.html">
+                            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Adobe PDF Reader
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:water.saver@mymanatee.org">Email</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.mymanatee.org">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.mymanatee.org/departments/utilities/">Manatee County Utilities</a>
+                    </li>
+                
+            </ul>    
+
+                <img class="seal" src="common_files/images/seal.png" alt="" /> 
+                <div class="copyright">&copy;2020 Manatee County Board of County Commissioners. All Rights Reserved.<br />
+                Designed and Developed by Manatee County Information Technology Services</div>
+
+            </div>
+        </div> 
+    </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script>
+  tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+    tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    
+    function GetClock(){
+    var d=new Date();
+    var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear(),nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+    
+         if(nhour==0){ap=" AM";nhour=12;}
+    else if(nhour<12){ap=" AM";}
+    else if(nhour==12){ap=" PM";}
+    else if(nhour>12){ap=" PM";nhour-=12;}
+    
+    if(nyear<1000) nyear+=1900;
+    if(nmin<=9) nmin="0"+nmin;
+    if(nsec<=9) nsec="0"+nsec;
+    
+    document.getElementById('date').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    }
+    
+    window.onload=function(){
+    GetClock();
+    setInterval(GetClock,1000);
+    }
+
+</script>
+  </body>
+</html>
